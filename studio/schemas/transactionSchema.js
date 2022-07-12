@@ -14,7 +14,7 @@ export const transactionSchema = {
             type: 'string',
         },
         {
-            name: 'fromAddress',
+            name: 'toAddress',
             title: 'To (Wallet Address)',
             type: 'string',
         },
@@ -22,6 +22,11 @@ export const transactionSchema = {
             name: 'amount',
             title: 'Amount',
             type: 'number',
-        }
+        },
+        {
+            name: 'timestamp',
+            title: 'Timestamp',
+            type: 'datetime',
+        },
     ]
 }
