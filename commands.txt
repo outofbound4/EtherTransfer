@@ -1,1 +1,4 @@
-yarn add react-icons
+for icons: yarn add react-icons
+in studio: npm install -g @sanity/cli
+for crating UI Next-js App: yarn create next-app --typescript
+To Run frontend: yarn dev
