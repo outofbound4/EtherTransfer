@@ -2,3 +2,9 @@ for icons: yarn add react-icons
 in studio: npm install -g @sanity/cli
 for crating UI Next-js App: yarn create next-app --typescript
 To Run frontend: yarn dev
+
+in smart_contract: 
+npx hardhat
+npm install --sav-dev hardhat
+npm install --save-dev @nomicfoundation/hardhat-toolbox
+npx hardhat compile - to compile the contracts
