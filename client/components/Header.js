@@ -57,18 +57,26 @@ const Header = () => {
                         <AiOutlineDown />
                     </div>
                 </div>
-                <div 
+
+                {currentAccount ? (
+                    <div className='Test'>
+                        <div className='Test'>0x..5C</div>
+                    </div>
+                ) : (
+                    <div 
                     onClick={() => connectWallet()}
                     className='Test'
                 >
                     <div className='Test'>
                         Connect Wallet
                     </div>
-                    <div className='Test'>
-                        <div className='Test'>
-                            <HiOutlineDotsVertical />
-                        </div>                    
                     </div>
+                )}
+
+                <div className='Test'>
+                    <div className='Test'>
+                        <HiOutlineDotsVertical />
+                    </div>                    
                 </div>
             </div>
 
