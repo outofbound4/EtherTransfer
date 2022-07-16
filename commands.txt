@@ -8,3 +8,4 @@ npx hardhat
 npm install --sav-dev hardhat
 npm install --save-dev @nomicfoundation/hardhat-toolbox
 npx hardhat compile - to compile the contracts
+npx hardhat run scripts/deploy.js --network rinkeby - to deploy the contract
