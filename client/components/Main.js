@@ -4,9 +4,21 @@ import { HiOutlineDotsVertical } from 'react-icons/hi';
 import { AiOutlineDown } from 'react-icons/ai';
 import { RiSettings3Fill } from 'react-icons/ri'
 import ethLogo from '../assets/eth.png';
+import { TransactionContext } from '../context/TransactionContext';
+import { useContext } from 'react';
 
 
 const Main = () => {
+    const { formData, handleChange, sendTransaction } = useContext(TransactionContext)
+
+    const handleSubmit = async (e) => {
+        const { addressTo, amount } = formData
+        e.preventDefault()
+
+        if(!addressTo || !amount)
+            return
+        sendTransaction()
+    }
     return (
         <div className=''>
             <div className=''>
@@ -37,11 +49,11 @@ const Main = () => {
                 <div className=''>
                     <input
                         type='text'
-                        className={style.transferPropInput}
+                        className=''
                         placeholder='0x...'
                         onChange={(e) => handleChange(e, 'addressTo')}
                     />
-                    <div className={style.currencySelector}></div>
+                    <div className=''></div>
                 </div>
                 <div onClick={(e) => handleSubmit(e)} className=''>
                     Confirm
